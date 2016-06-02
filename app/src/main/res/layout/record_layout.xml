@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="30dp"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <CalendarView
+        android:id="@+id/calendar"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        //總消耗
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="總消耗："
+            android:id="@+id/textView"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true" />
+        //總距離
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="總距離："
+            android:id="@+id/textView2"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true" />
+        //總時間
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="總時間："
+            android:id="@+id/textView3"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true" />
+
+        //單位 卡
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="卡"
+            android:id="@+id/textView4"
+            android:layout_gravity="center_horizontal"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/all_cal" />
+        //單位 公里
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="公里"
+            android:id="@+id/textView5"
+            android:layout_alignTop="@+id/textView2"
+            android:layout_toEndOf="@+id/all_distance"/>
+        //單位 時間
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="小時"
+            android:id="@+id/textView6"
+            android:layout_alignParentBottom="true"
+            android:layout_toEndOf="@+id/all_time" />
+
+        //熱量
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="0"
+            android:id="@+id/all_cal"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/textView" />
+        //距離
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="0"
+            android:id="@+id/all_distance"
+            android:layout_alignBottom="@+id/textView2"
+            android:layout_toEndOf="@+id/textView2" />
+        //時間
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="0"
+            android:id="@+id/all_time"
+            android:layout_alignParentBottom="true"
+            android:layout_toEndOf="@+id/textView3"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="go to SQL"
+            android:id="@+id/btn"
+            android:onClick="true"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true" />
+
+        //歷史圖片
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/btn" />
+
+    </RelativeLayout>
+</LinearLayout>
